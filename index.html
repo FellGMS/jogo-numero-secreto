@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo de Adivinhação</title>
+</head>
+<body>
+    <header class="fg-header">
+        <h1 id="titulo-principal">Jogo do número secreto.</h1>
+    </header>
+    <main class="fg-container">
+        <section class="fg-content">
+            <div class="fg-info">
+                <div class="fg-text">
+                    <h2 id="subtitulo"></h2>
+                    <p class="fg-paragraph" id="descricao">Escolha um número entre 1 e 10.</p>
+                </div>
+                <input type="number" min="1" max="10" class="fg-input" id="inputNumero" placeholder="Digite seu chute">
+                <div class="fg-buttons">
+                    <button onclick="verificarChute()" class="fg-button">Chutar</button>
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="fg-button" disabled>Novo jogo</button>
+                </div>
+                <p class="fg-message" id="mensagem"></p>
+            </div>
+            <img src="./img/bot.png" alt="Uma pessoa olhando para a esquerda" class="fg-image" />
+        </section>
+    </main>
+    <footer class="fg-footer">
+        <p>Desenvolvido por Fellipe Goulart Gomes</p>
+    </footer>
+    <script src="app.js" defer></script>
+</body>
+</html>
